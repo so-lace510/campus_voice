@@ -191,9 +191,6 @@ export default function ComplaintForm() {
           )}
         </div>
       </main>
-      <p className="admin-footnote">
-        Faculty staff — <a href="/admin/login">sign in to the review dashboard</a>
-      </p>
     </div>
   );
 }

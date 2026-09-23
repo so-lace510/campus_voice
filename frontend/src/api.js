@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_API_URL || "http://campus-voice-9trp.onrender.com";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://campus-voice-9trp.onrender.com";
 
 export const api = axios.create({
   baseURL: BASE_URL,
