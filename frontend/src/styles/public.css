@@ -1,0 +1,266 @@
+.public-page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.public-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 28px 24px 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+}
+
+.hero-wrap {
+  flex: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: 56px 24px 80px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 64px;
+}
+
+@media (max-width: 860px) {
+  .hero-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 32px;
+  }
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  color: var(--ink);
+  max-width: 11ch;
+}
+
+.hero-copy .lede {
+  margin-top: 20px;
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 42ch;
+}
+
+.assurance {
+  margin-top: 40px;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+
+.assurance dt {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.assurance dd {
+  margin: 4px 0 22px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  max-width: 40ch;
+}
+
+.assurance dd:last-child {
+  margin-bottom: 0;
+}
+
+.form-panel {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 36px 36px 32px;
+}
+
+.form-panel h2 {
+  font-size: 1.4rem;
+}
+
+.form-panel .form-sub {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.field {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field .hint {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  padding: 12px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--ink);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.55;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--teal);
+}
+
+.char-count {
+  align-self: flex-end;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.submit-row {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  padding: 13px 26px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gold-deep);
+}
+
+.btn-primary:disabled {
+  background: var(--line-strong);
+  cursor: not-allowed;
+}
+
+.form-error {
+  color: var(--brick);
+  font-size: 0.88rem;
+}
+
+.success-panel {
+  text-align: left;
+}
+
+.success-panel .code {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  background: var(--teal-soft);
+  color: var(--teal);
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+}
+
+.success-panel .code-hint {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  max-width: 46ch;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--teal);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* Track page */
+.track-panel {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status-new {
+  background: #ede6f0;
+  color: var(--plum);
+}
+
+.status-in-review {
+  background: #fbf0dc;
+  color: var(--gold-deep);
+}
+
+.status-resolved {
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+.admin-footnote {
+  text-align: center;
+  padding: 24px;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.admin-footnote a {
+  color: var(--ink-soft);
+}
